@@ -1,0 +1,16 @@
+[package]
+name = "Libra2Framework"
+version = "1.0.0"
+
+[addresses]
+std = "0x1"
+libra2_std = "0x1"
+libra2_framework = "0x1"
+libra2_fungible_asset = "0xA"
+libra2_token = "0x3"
+core_resources = "0xA550C18"
+vm_reserved = "0x0"
+
+[dependencies]
+Libra2Stdlib = { local = "../libra2-stdlib" }
+MoveStdlib = { local = "../move-stdlib" }

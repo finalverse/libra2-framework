@@ -3,8 +3,8 @@
 
 # Module `0x1::features`
 
-Defines feature flags for Aptos. Those are used in Aptos specific implementations of features in
-the Move stdlib, the Aptos stdlib, and the Aptos framework.
+Defines feature flags for Libra2. Those are used in Libra2 specific implementations of features in
+the Move stdlib, the Libra2 stdlib, and the Libra2 framework.
 
 ============================================================================================
 Feature Flag Definitions
@@ -36,8 +36,8 @@ return true.
 -  [Function `treat_friend_as_private`](#0x1_features_treat_friend_as_private)
 -  [Function `get_sha_512_and_ripemd_160_feature`](#0x1_features_get_sha_512_and_ripemd_160_feature)
 -  [Function `sha_512_and_ripemd_160_enabled`](#0x1_features_sha_512_and_ripemd_160_enabled)
--  [Function `get_aptos_stdlib_chain_id_feature`](#0x1_features_get_aptos_stdlib_chain_id_feature)
--  [Function `aptos_stdlib_chain_id_enabled`](#0x1_features_aptos_stdlib_chain_id_enabled)
+-  [Function `get_libra2_stdlib_chain_id_feature`](#0x1_features_get_libra2_stdlib_chain_id_feature)
+-  [Function `libra2_stdlib_chain_id_enabled`](#0x1_features_libra2_stdlib_chain_id_enabled)
 -  [Function `get_vm_binary_format_v6`](#0x1_features_get_vm_binary_format_v6)
 -  [Function `allow_vm_binary_format_v6`](#0x1_features_allow_vm_binary_format_v6)
 -  [Function `get_collect_and_distribute_gas_fees_feature`](#0x1_features_get_collect_and_distribute_gas_fees_feature)
@@ -271,7 +271,7 @@ Lifetime: transient
 
 <a id="0x1_features_APTOS_STD_CHAIN_ID_NATIVES"></a>
 
-Whether the new <code>aptos_stdlib::type_info::chain_id()</code> native for fetching the chain ID is enabled.
+Whether the new <code>libra2_stdlib::type_info::chain_id()</code> native for fetching the chain ID is enabled.
 This is needed because of the introduction of a new native function.
 Lifetime: transient
 
@@ -580,7 +580,7 @@ Lifetime: transient
 
 <a id="0x1_features_JWK_CONSENSUS"></a>
 
-Deprecated by <code>aptos_framework::jwk_consensus_config::JWKConsensusConfig</code>.
+Deprecated by <code>libra2_framework::jwk_consensus_config::JWKConsensusConfig</code>.
 
 
 <pre><code><b>const</b> <a href="features.md#0x1_features_JWK_CONSENSUS">JWK_CONSENSUS</a>: u64 = 49;
@@ -657,7 +657,7 @@ Lifetime: transient
 
 <a id="0x1_features_MODULE_EVENT_MIGRATION"></a>
 
-Whether aptos_framwork enables the behavior of module event migration.
+Whether libra2_framwork enables the behavior of module event migration.
 
 Lifetime: transient
 
@@ -691,7 +691,7 @@ Lifetime: transient
 
 <a id="0x1_features_MULTI_ED25519_PK_VALIDATE_V2_NATIVES"></a>
 
-Whether the new <code>aptos_stdlib::multi_ed25519::public_key_validate_internal_v2()</code> native is enabled.
+Whether the new <code>libra2_stdlib::multi_ed25519::public_key_validate_internal_v2()</code> native is enabled.
 This is needed because of the introduction of a new native function.
 Lifetime: transient
 
@@ -763,7 +763,7 @@ Lifetime: transient
 
 <a id="0x1_features_PARTIAL_GOVERNANCE_VOTING"></a>
 
-Whether enable paritial governance voting on aptos_governance.
+Whether enable paritial governance voting on libra2_governance.
 Lifetime: transient
 
 
@@ -803,7 +803,7 @@ Lifetime: transient
 
 <a id="0x1_features_RECONFIGURE_WITH_DKG"></a>
 
-Deprecated by <code>aptos_framework::randomness_config::RandomnessConfig</code>.
+Deprecated by <code>libra2_framework::randomness_config::RandomnessConfig</code>.
 
 
 <pre><code><b>const</b> <a href="features.md#0x1_features_RECONFIGURE_WITH_DKG">RECONFIGURE_WITH_DKG</a>: u64 = 45;
@@ -1068,13 +1068,13 @@ Lifetime: transient
 
 </details>
 
-<a id="0x1_features_get_aptos_stdlib_chain_id_feature"></a>
+<a id="0x1_features_get_libra2_stdlib_chain_id_feature"></a>
 
-## Function `get_aptos_stdlib_chain_id_feature`
+## Function `get_libra2_stdlib_chain_id_feature`
 
 
 
-<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_get_aptos_stdlib_chain_id_feature">get_aptos_stdlib_chain_id_feature</a>(): u64
+<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_get_libra2_stdlib_chain_id_feature">get_libra2_stdlib_chain_id_feature</a>(): u64
 </code></pre>
 
 
@@ -1083,20 +1083,20 @@ Lifetime: transient
 <summary>Implementation</summary>
 
 
-<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_get_aptos_stdlib_chain_id_feature">get_aptos_stdlib_chain_id_feature</a>(): u64 { <a href="features.md#0x1_features_APTOS_STD_CHAIN_ID_NATIVES">APTOS_STD_CHAIN_ID_NATIVES</a> }
+<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_get_libra2_stdlib_chain_id_feature">get_libra2_stdlib_chain_id_feature</a>(): u64 { <a href="features.md#0x1_features_APTOS_STD_CHAIN_ID_NATIVES">APTOS_STD_CHAIN_ID_NATIVES</a> }
 </code></pre>
 
 
 
 </details>
 
-<a id="0x1_features_aptos_stdlib_chain_id_enabled"></a>
+<a id="0x1_features_libra2_stdlib_chain_id_enabled"></a>
 
-## Function `aptos_stdlib_chain_id_enabled`
+## Function `libra2_stdlib_chain_id_enabled`
 
 
 
-<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_aptos_stdlib_chain_id_enabled">aptos_stdlib_chain_id_enabled</a>(): bool
+<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_libra2_stdlib_chain_id_enabled">libra2_stdlib_chain_id_enabled</a>(): bool
 </code></pre>
 
 
@@ -1105,7 +1105,7 @@ Lifetime: transient
 <summary>Implementation</summary>
 
 
-<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_aptos_stdlib_chain_id_enabled">aptos_stdlib_chain_id_enabled</a>(): bool <b>acquires</b> <a href="features.md#0x1_features_Features">Features</a> {
+<pre><code><b>public</b> <b>fun</b> <a href="features.md#0x1_features_libra2_stdlib_chain_id_enabled">libra2_stdlib_chain_id_enabled</a>(): bool <b>acquires</b> <a href="features.md#0x1_features_Features">Features</a> {
     <a href="features.md#0x1_features_is_enabled">is_enabled</a>(<a href="features.md#0x1_features_APTOS_STD_CHAIN_ID_NATIVES">APTOS_STD_CHAIN_ID_NATIVES</a>)
 }
 </code></pre>

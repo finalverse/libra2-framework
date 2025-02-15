@@ -1,5 +1,5 @@
-/// Defines feature flags for Aptos. Those are used in Aptos specific implementations of features in
-/// the Move stdlib, the Aptos stdlib, and the Aptos framework.
+/// Defines feature flags for Libra2. Those are used in Libra2 specific implementations of features in
+/// the Move stdlib, the Libra2 stdlib, and the Libra2 framework.
 ///
 /// ============================================================================================
 /// Feature Flag Definitions
@@ -64,14 +64,14 @@ module std::features {
         is_enabled(SHA_512_AND_RIPEMD_160_NATIVES)
     }
 
-    /// Whether the new `aptos_stdlib::type_info::chain_id()` native for fetching the chain ID is enabled.
+    /// Whether the new `libra2_stdlib::type_info::chain_id()` native for fetching the chain ID is enabled.
     /// This is needed because of the introduction of a new native function.
     /// Lifetime: transient
     const APTOS_STD_CHAIN_ID_NATIVES: u64 = 4;
 
-    public fun get_aptos_stdlib_chain_id_feature(): u64 { APTOS_STD_CHAIN_ID_NATIVES }
+    public fun get_libra2_stdlib_chain_id_feature(): u64 { APTOS_STD_CHAIN_ID_NATIVES }
 
-    public fun aptos_stdlib_chain_id_enabled(): bool acquires Features {
+    public fun libra2_stdlib_chain_id_enabled(): bool acquires Features {
         is_enabled(APTOS_STD_CHAIN_ID_NATIVES)
     }
 
@@ -99,7 +99,7 @@ module std::features {
         false
     }
 
-    /// Whether the new `aptos_stdlib::multi_ed25519::public_key_validate_internal_v2()` native is enabled.
+    /// Whether the new `libra2_stdlib::multi_ed25519::public_key_validate_internal_v2()` native is enabled.
     /// This is needed because of the introduction of a new native function.
     /// Lifetime: transient
     const MULTI_ED25519_PK_VALIDATE_V2_NATIVES: u64 = 7;
@@ -192,7 +192,7 @@ module std::features {
         is_enabled(PERIODICAL_REWARD_RATE_DECREASE)
     }
 
-    /// Whether enable paritial governance voting on aptos_governance.
+    /// Whether enable paritial governance voting on libra2_governance.
     /// Lifetime: transient
     const PARTIAL_GOVERNANCE_VOTING: u64 = 17;
 
@@ -363,7 +363,7 @@ module std::features {
         is_enabled(BN254_STRUCTURES)
     }
 
-    /// Deprecated by `aptos_framework::randomness_config::RandomnessConfig`.
+    /// Deprecated by `libra2_framework::randomness_config::RandomnessConfig`.
     const RECONFIGURE_WITH_DKG: u64 = 45;
 
     public fun get_reconfigure_with_dkg_feature(): u64 { RECONFIGURE_WITH_DKG }
@@ -394,7 +394,7 @@ module std::features {
         is_enabled(KEYLESS_BUT_ZKLESS_ACCOUNTS)
     }
 
-    /// Deprecated by `aptos_framework::jwk_consensus_config::JWKConsensusConfig`.
+    /// Deprecated by `libra2_framework::jwk_consensus_config::JWKConsensusConfig`.
     const JWK_CONSENSUS: u64 = 49;
 
     public fun get_jwk_consensus_feature(): u64 { JWK_CONSENSUS }
@@ -462,7 +462,7 @@ module std::features {
         is_enabled(DELEGATION_POOL_ALLOWLISTING)
     }
 
-    /// Whether aptos_framwork enables the behavior of module event migration.
+    /// Whether libra2_framwork enables the behavior of module event migration.
     ///
     /// Lifetime: transient
     const MODULE_EVENT_MIGRATION: u64 = 57;
